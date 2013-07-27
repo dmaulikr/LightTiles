@@ -24,6 +24,7 @@
 		47E1CC9617A3675600E595C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1CC7117A3675600E595C2 /* UIKit.framework */; };
 		47E1CC9E17A3675600E595C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47E1CC9C17A3675600E595C2 /* InfoPlist.strings */; };
 		47E1CCA017A3675600E595C2 /* LightTilesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1CC9F17A3675600E595C2 /* LightTilesTests.m */; };
+		47E1CCB317A36D2700E595C2 /* LTMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1CCB217A36D2700E595C2 /* LTMapTile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,9 @@
 		47E1CC9B17A3675600E595C2 /* LightTilesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LightTilesTests-Info.plist"; sourceTree = "<group>"; };
 		47E1CC9D17A3675600E595C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		47E1CC9F17A3675600E595C2 /* LightTilesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightTilesTests.m; sourceTree = "<group>"; };
+		47E1CCB017A36CDE00E595C2 /* grass00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass00.png; sourceTree = "<group>"; };
+		47E1CCB117A36D2700E595C2 /* LTMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMapTile.h; sourceTree = "<group>"; };
+		47E1CCB217A36D2700E595C2 /* LTMapTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMapTile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 		47E1CC7517A3675600E595C2 /* LightTiles */ = {
 			isa = PBXGroup;
 			children = (
+				47E1CCA917A36A6800E595C2 /* spirtes */,
 				47E1CC7E17A3675600E595C2 /* LTAppDelegate.h */,
 				47E1CC7F17A3675600E595C2 /* LTAppDelegate.m */,
 				47E1CC8117A3675600E595C2 /* Main.storyboard */,
@@ -131,6 +136,7 @@
 				47E1CC8A17A3675600E595C2 /* Spaceship.png */,
 				47E1CC8C17A3675600E595C2 /* Images.xcassets */,
 				47E1CC7617A3675600E595C2 /* Supporting Files */,
+				47E1CCAE17A36CDE00E595C2 /* resources */,
 			);
 			path = LightTiles;
 			sourceTree = "<group>";
@@ -162,6 +168,31 @@
 				47E1CC9C17A3675600E595C2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47E1CCA917A36A6800E595C2 /* spirtes */ = {
+			isa = PBXGroup;
+			children = (
+				47E1CCB117A36D2700E595C2 /* LTMapTile.h */,
+				47E1CCB217A36D2700E595C2 /* LTMapTile.m */,
+			);
+			path = spirtes;
+			sourceTree = "<group>";
+		};
+		47E1CCAE17A36CDE00E595C2 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				47E1CCAF17A36CDE00E595C2 /* sprites */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		47E1CCAF17A36CDE00E595C2 /* sprites */ = {
+			isa = PBXGroup;
+			children = (
+				47E1CCB017A36CDE00E595C2 /* grass00.png */,
+			);
+			path = sprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47E1CC8017A3675600E595C2 /* LTAppDelegate.m in Sources */,
+				47E1CCB317A36D2700E595C2 /* LTMapTile.m in Sources */,
 				47E1CC7C17A3675600E595C2 /* main.m in Sources */,
 				47E1CC8917A3675600E595C2 /* LTMyScene.m in Sources */,
 				47E1CC8617A3675600E595C2 /* LTViewController.m in Sources */,
