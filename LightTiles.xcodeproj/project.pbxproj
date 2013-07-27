@@ -24,6 +24,7 @@
 		47E1CC9617A3675600E595C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1CC7117A3675600E595C2 /* UIKit.framework */; };
 		47E1CC9E17A3675600E595C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47E1CC9C17A3675600E595C2 /* InfoPlist.strings */; };
 		47E1CCA017A3675600E595C2 /* LightTilesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1CC9F17A3675600E595C2 /* LightTilesTests.m */; };
+		47E1CCAD17A36A8D00E595C2 /* LTMapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1CCAC17A36A8D00E595C2 /* LTMapScene.m */; };
 		47E1CCB317A36D2700E595C2 /* LTMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1CCB217A36D2700E595C2 /* LTMapTile.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		47E1CC9B17A3675600E595C2 /* LightTilesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LightTilesTests-Info.plist"; sourceTree = "<group>"; };
 		47E1CC9D17A3675600E595C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		47E1CC9F17A3675600E595C2 /* LightTilesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightTilesTests.m; sourceTree = "<group>"; };
+		47E1CCAB17A36A8D00E595C2 /* LTMapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMapScene.h; sourceTree = "<group>"; };
+		47E1CCAC17A36A8D00E595C2 /* LTMapScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMapScene.m; sourceTree = "<group>"; };
 		47E1CCB017A36CDE00E595C2 /* grass00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass00.png; sourceTree = "<group>"; };
 		47E1CCB117A36D2700E595C2 /* LTMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMapTile.h; sourceTree = "<group>"; };
 		47E1CCB217A36D2700E595C2 /* LTMapTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMapTile.m; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				47E1CCA917A36A6800E595C2 /* spirtes */,
+				47E1CCAA17A36A6800E595C2 /* scenes */,
 				47E1CC7E17A3675600E595C2 /* LTAppDelegate.h */,
 				47E1CC7F17A3675600E595C2 /* LTAppDelegate.m */,
 				47E1CC8117A3675600E595C2 /* Main.storyboard */,
@@ -177,6 +181,15 @@
 				47E1CCB217A36D2700E595C2 /* LTMapTile.m */,
 			);
 			path = spirtes;
+			sourceTree = "<group>";
+		};
+		47E1CCAA17A36A6800E595C2 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				47E1CCAB17A36A8D00E595C2 /* LTMapScene.h */,
+				47E1CCAC17A36A8D00E595C2 /* LTMapScene.m */,
+			);
+			path = scenes;
 			sourceTree = "<group>";
 		};
 		47E1CCAE17A36CDE00E595C2 /* resources */ = {
@@ -294,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E1CCAD17A36A8D00E595C2 /* LTMapScene.m in Sources */,
 				47E1CC8017A3675600E595C2 /* LTAppDelegate.m in Sources */,
 				47E1CCB317A36D2700E595C2 /* LTMapTile.m in Sources */,
 				47E1CC7C17A3675600E595C2 /* main.m in Sources */,
