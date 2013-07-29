@@ -19,10 +19,13 @@ typedef enum {
 
 @property (strong, nonatomic) SKSpriteNode *background;
 @property (strong, nonatomic) SKSpriteNode *shade;
-
 @property (assign, nonatomic) CGFloat ambientLight;
 @property (assign, nonatomic) CGFloat lightAbsorption;
-
 @property (assign, nonatomic) LTMapTileType tileType;
+
+- (id)initWithType:(LTMapTileType)type;
++ (id)mapTileWithType:(LTMapTileType)type;
+
++ (CGSize)size;
 
 @end

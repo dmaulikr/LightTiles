@@ -13,7 +13,7 @@ static CGSize LTMapTileSize;
 @implementation LTMapTile
 
 #pragma mark - Initialization
-- (void)initialize {
++ (void)initialize {
     LTMapTileSize = CGSizeMake(32, 32);
 }
 - (id)initWithType:(LTMapTileType)type {
@@ -34,7 +34,7 @@ static CGSize LTMapTileSize;
     self.shade = [SKSpriteNode spriteNodeWithColor:[SKColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0] size:LTMapTileSize];
 
     self.tileType = type;
-    self.ambientLight = 0.0;
+    self.ambientLight = 1.0;
 
     switch (self.tileType) {
         case noTile:
@@ -50,12 +50,23 @@ static CGSize LTMapTileSize;
 
     [self addChild:self.background];
     [self addChild:self.shade];
+    self.userInteractionEnabled = YES;
 }
 
-#pragma mark - Setters
+#pragma mark - Setters/Getters
++ (CGSize)size {
+    return LTMapTileSize;
+}
 - (void)setAmbientLight:(CGFloat)ambientLight {
     _ambientLight = ambientLight;
     self.shade.alpha = fmaxf(1.0 - ambientLight, 0.0);
+}
+
+#pragma mark - Touch Interactions
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    /* Called when a touch begins */
+    NSLog(@"Test");
+    self.ambientLight = self.ambientLight - 0.1;
 }
 
 @end
