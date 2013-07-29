@@ -26,6 +26,7 @@
 		47E1CCA017A3675600E595C2 /* LightTilesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1CC9F17A3675600E595C2 /* LightTilesTests.m */; };
 		47E1CCAD17A36A8D00E595C2 /* LTMapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1CCAC17A36A8D00E595C2 /* LTMapScene.m */; };
 		47E1CCB317A36D2700E595C2 /* LTMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1CCB217A36D2700E595C2 /* LTMapTile.m */; };
+		47E1CCB417A384DA00E595C2 /* grass00.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E1CCB017A36CDE00E595C2 /* grass00.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -285,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E1CCB417A384DA00E595C2 /* grass00.png in Resources */,
 				47E1CC7A17A3675600E595C2 /* InfoPlist.strings in Resources */,
 				47E1CC8D17A3675600E595C2 /* Images.xcassets in Resources */,
 				47E1CC8B17A3675600E595C2 /* Spaceship.png in Resources */,
