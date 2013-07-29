@@ -10,4 +10,6 @@
 
 @interface LTMapScene : SKScene
 
+@property (strong, nonatomic) NSDictionary *tileMap;
+
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "LTViewController.h"
-#import "LTMyScene.h"
+#import "LTMapScene.h"
 
 @implementation LTViewController
 
@@ -21,7 +21,7 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [LTMyScene sceneWithSize:skView.bounds.size];
+    SKScene * scene = [LTMapScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
