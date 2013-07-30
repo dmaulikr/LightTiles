@@ -7,9 +7,10 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "LTMap.h"
 
 @interface LTMapScene : SKScene
 
-@property (strong, nonatomic) NSDictionary *tileMap;
+@property (strong, nonatomic) LTMap *map;
 
 @end
