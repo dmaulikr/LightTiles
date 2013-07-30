@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 somethingpointless. All rights reserved.
 //
 
-#import <SpriteKit/SpriteKit.h>
+#import "LTBaseTile.h"
 
 typedef enum {
 
@@ -15,13 +15,14 @@ typedef enum {
 
 } LTMapTileType;
 
-@interface LTMapTile : SKNode
+@interface LTMapTile : LTBaseTile
 
 @property (strong, nonatomic) SKSpriteNode *background;
 @property (strong, nonatomic) SKSpriteNode *shade;
 @property (assign, nonatomic) CGFloat ambientLight;
 @property (assign, nonatomic) CGFloat lightAbsorption;
 @property (assign, nonatomic) LTMapTileType tileType;
+@property (strong, nonatomic) NSSet *components;
 
 - (id)initWithType:(LTMapTileType)type;
 + (id)mapTileWithType:(LTMapTileType)type;
