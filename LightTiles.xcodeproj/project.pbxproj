@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4705586D17A74FC700F85793 /* grass00@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grass00@2x.png"; sourceTree = "<group>"; };
 		47E1CC6A17A3675600E595C2 /* LightTiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightTiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E1CC6D17A3675600E595C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		47E1CC6F17A3675600E595C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -204,6 +205,7 @@
 		47E1CCAF17A36CDE00E595C2 /* sprites */ = {
 			isa = PBXGroup;
 			children = (
+				4705586D17A74FC700F85793 /* grass00@2x.png */,
 				47E1CCB017A36CDE00E595C2 /* grass00.png */,
 			);
 			path = sprites;
@@ -519,6 +521,7 @@
 				47E1CCA517A3675600E595C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47E1CCA617A3675600E595C2 /* Build configuration list for PBXNativeTarget "LightTilesTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +530,7 @@
 				47E1CCA817A3675600E595C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
