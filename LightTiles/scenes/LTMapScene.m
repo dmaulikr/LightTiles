@@ -36,7 +36,7 @@
         while (widthLeft > 0.0) {
             LTMapTile *tile = [LTMapTile mapTileWithType:grassTile];
             tempMap[[NSString stringWithFormat:@"tile-%i:%i", row, col]] = tile;
-            tile.position = CGPointMake((row+0.5)*[LTMapTile size].height, (col+0.5)*[LTMapTile size].height);
+            tile.position = CGPointMake((col+0.5)*[LTMapTile size].width, (row+0.5)*[LTMapTile size].height);
             widthLeft = widthLeft - [LTMapTile size].width;
             col = col + 1;
             [self addChild:tile];
