@@ -11,17 +11,19 @@
 @implementation LTBaseTile
 
 #pragma mark - Initialization
-- (id)init {
+- (id)initWithMap:(LTMap *)map {
 
     self = [super init];
     if (self) {
+        self.map = map;
+        self.location = CGPointZero;
         self.adjacentTiles = @[[NSNull null], [NSNull null], [NSNull null], [NSNull null]];
     }
     return self;
 }
-+ (id)tile {
++ (id)tileWithMap:(LTMap *)map {
 
-    return [[LTBaseTile alloc] init];
+    return [[LTBaseTile alloc] initWithMap:map];
 }
 
 #pragma mark - Adjacency

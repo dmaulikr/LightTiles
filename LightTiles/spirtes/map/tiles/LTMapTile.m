@@ -7,6 +7,8 @@
 //
 
 #import "LTMapTile.h"
+#import "LTSource.h"
+#import "LTMap.h"
 
 static CGSize LTMapTileSize;
 
@@ -16,17 +18,17 @@ static CGSize LTMapTileSize;
 + (void)initialize {
     LTMapTileSize = CGSizeMake(32, 32);
 }
-- (id)initWithType:(LTMapTileType)type {
+- (id)initWithType:(LTMapTileType)type andMap:(LTMap *)map{
 
-    self = [super init];
+    self = [super initWithMap:map];
     if (self) {
         [self setupWithType:type];
     }
     return self;
 }
 
-+ (id)mapTileWithType:(LTMapTileType)type {
-    return [[LTMapTile alloc] initWithType:type];
++ (id)mapTileWithType:(LTMapTileType)type andMap:(LTMap *)map {
+    return [[LTMapTile alloc] initWithType:type andMap:map];
 }
 
 - (void)setupWithType:(LTMapTileType)type {
@@ -34,7 +36,7 @@ static CGSize LTMapTileSize;
     self.shade = [SKSpriteNode spriteNodeWithColor:[SKColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0] size:LTMapTileSize];
 
     self.tileType = type;
-    self.ambientLight = 1.0;
+    self.ambientLight = 0.0;
 
     switch (self.tileType) {
         case noTile:
@@ -65,8 +67,13 @@ static CGSize LTMapTileSize;
 #pragma mark - Touch Interactions
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
-    NSLog(@"Test");
-    self.ambientLight = self.ambientLight - 0.1;
+    LTSource *lightSource = [LTSource source];
+    lightSource.locaiton = self.location;
+    lightSource.flowMap = self.map;
+    lightSource.intensity = 1.0;
+    LTSpout *spout = [LTSpout spoutWithSource:lightSource andDirection:LTFlowDirectionNorth];
+    [lightSource addSpout:spout];
+    [lightSource flow];
 }
 
 @end

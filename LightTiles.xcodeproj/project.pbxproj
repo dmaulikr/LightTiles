@@ -10,6 +10,11 @@
 		4705588017A76D0000F85793 /* LTMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4705587A17A76D0000F85793 /* LTMap.m */; };
 		4705588117A76D0000F85793 /* LTBaseTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4705587D17A76D0000F85793 /* LTBaseTile.m */; };
 		4705588217A76D0000F85793 /* LTMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4705587F17A76D0000F85793 /* LTMapTile.m */; };
+		47B3121A17AB28EB009B2D3A /* LTSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B3121917AB28EB009B2D3A /* LTSource.m */; };
+		47B3121D17AB2AF0009B2D3A /* LTFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B3121C17AB2AF0009B2D3A /* LTFlow.m */; };
+		47B3122017AB2C0D009B2D3A /* LTSpout.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B3121F17AB2C0D009B2D3A /* LTSpout.m */; };
+		47B3122517AB4BF0009B2D3A /* LTRadialFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B3122417AB4BF0009B2D3A /* LTRadialFlow.m */; };
+		47B3122817AB4C01009B2D3A /* LTLinearFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B3122717AB4C01009B2D3A /* LTLinearFlow.m */; };
 		47E1CC6E17A3675600E595C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1CC6D17A3675600E595C2 /* Foundation.framework */; };
 		47E1CC7017A3675600E595C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1CC6F17A3675600E595C2 /* CoreGraphics.framework */; };
 		47E1CC7217A3675600E595C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E1CC7117A3675600E595C2 /* UIKit.framework */; };
@@ -49,6 +54,17 @@
 		4705587D17A76D0000F85793 /* LTBaseTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTBaseTile.m; sourceTree = "<group>"; };
 		4705587E17A76D0000F85793 /* LTMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMapTile.h; sourceTree = "<group>"; };
 		4705587F17A76D0000F85793 /* LTMapTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMapTile.m; sourceTree = "<group>"; };
+		47B3121817AB28EB009B2D3A /* LTSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSource.h; sourceTree = "<group>"; };
+		47B3121917AB28EB009B2D3A /* LTSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSource.m; sourceTree = "<group>"; };
+		47B3121B17AB2AF0009B2D3A /* LTFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTFlow.h; sourceTree = "<group>"; };
+		47B3121C17AB2AF0009B2D3A /* LTFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTFlow.m; sourceTree = "<group>"; };
+		47B3121E17AB2C0D009B2D3A /* LTSpout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSpout.h; sourceTree = "<group>"; };
+		47B3121F17AB2C0D009B2D3A /* LTSpout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSpout.m; sourceTree = "<group>"; };
+		47B3122317AB4BF0009B2D3A /* LTRadialFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTRadialFlow.h; sourceTree = "<group>"; };
+		47B3122417AB4BF0009B2D3A /* LTRadialFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTRadialFlow.m; sourceTree = "<group>"; };
+		47B3122617AB4C01009B2D3A /* LTLinearFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLinearFlow.h; sourceTree = "<group>"; };
+		47B3122717AB4C01009B2D3A /* LTLinearFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTLinearFlow.m; sourceTree = "<group>"; };
+		47B3122917AB4E2A009B2D3A /* LTFlowMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTFlowMap.h; sourceTree = "<group>"; };
 		47E1CC6A17A3675600E595C2 /* LightTiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightTiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E1CC6D17A3675600E595C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		47E1CC6F17A3675600E595C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +139,24 @@
 			path = tiles;
 			sourceTree = "<group>";
 		};
+		47B3121717AB28A8009B2D3A /* flow */ = {
+			isa = PBXGroup;
+			children = (
+				47B3121817AB28EB009B2D3A /* LTSource.h */,
+				47B3121917AB28EB009B2D3A /* LTSource.m */,
+				47B3121E17AB2C0D009B2D3A /* LTSpout.h */,
+				47B3121F17AB2C0D009B2D3A /* LTSpout.m */,
+				47B3121B17AB2AF0009B2D3A /* LTFlow.h */,
+				47B3121C17AB2AF0009B2D3A /* LTFlow.m */,
+				47B3122317AB4BF0009B2D3A /* LTRadialFlow.h */,
+				47B3122417AB4BF0009B2D3A /* LTRadialFlow.m */,
+				47B3122617AB4C01009B2D3A /* LTLinearFlow.h */,
+				47B3122717AB4C01009B2D3A /* LTLinearFlow.m */,
+				47B3122917AB4E2A009B2D3A /* LTFlowMap.h */,
+			);
+			path = flow;
+			sourceTree = "<group>";
+		};
 		47E1CC6117A3675600E595C2 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +191,7 @@
 		47E1CC7517A3675600E595C2 /* LightTiles */ = {
 			isa = PBXGroup;
 			children = (
+				47B3121717AB28A8009B2D3A /* flow */,
 				47E1CCA917A36A6800E595C2 /* spirtes */,
 				47E1CCAA17A36A6800E595C2 /* scenes */,
 				47E1CC7E17A3675600E595C2 /* LTAppDelegate.h */,
@@ -339,12 +374,17 @@
 			files = (
 				4705588017A76D0000F85793 /* LTMap.m in Sources */,
 				47E1CCAD17A36A8D00E595C2 /* LTMapScene.m in Sources */,
+				47B3122517AB4BF0009B2D3A /* LTRadialFlow.m in Sources */,
 				4705588217A76D0000F85793 /* LTMapTile.m in Sources */,
 				47E1CC8017A3675600E595C2 /* LTAppDelegate.m in Sources */,
+				47B3121A17AB28EB009B2D3A /* LTSource.m in Sources */,
+				47B3122817AB4C01009B2D3A /* LTLinearFlow.m in Sources */,
 				4705588117A76D0000F85793 /* LTBaseTile.m in Sources */,
 				47E1CC7C17A3675600E595C2 /* main.m in Sources */,
 				47E1CC8917A3675600E595C2 /* LTMyScene.m in Sources */,
 				47E1CC8617A3675600E595C2 /* LTViewController.m in Sources */,
+				47B3122017AB2C0D009B2D3A /* LTSpout.m in Sources */,
+				47B3121D17AB2AF0009B2D3A /* LTFlow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -57,9 +57,9 @@
         
         while (widthLeft > 0.0) {
 
-            LTMapTile *tile = [LTMapTile mapTileWithType:grassTile];
+            LTMapTile *tile = [LTMapTile mapTileWithType:grassTile andMap:self];
             tile.position = CGPointMake((col+0.5)*[LTMapTile size].width, (row+0.5)*[LTMapTile size].height);
-
+            tile.location = CGPointMake(col, row);
             [self setTile:tile forLocation:CGPointMake(col, row)];
             [self addChild:tile];
 
@@ -69,6 +69,7 @@
         heightLeft = heightLeft - [LTMapTile size].height;
         row = row + 1;
     }
+    self.tileMapSize = CGSizeMake(col, row);
 }
 
 #pragma mark - Tile Access
@@ -86,6 +87,18 @@
     NSMutableDictionary *tempMap = self.tileMap.mutableCopy;
     tempMap[[self keyForLocation:location]] = tile;
     self.tileMap = tempMap;
+}
+
+#pragma mark - LTFlowMap
+- (CGFloat)reductionValueAtLocation:(CGPoint)point {
+    return [[self tileAtLocation:point] lightAbsorption];
+}
+- (CGSize)flowMapSize {
+    return self.tileMapSize;
+}
+- (void)updateLocation:(CGPoint)location withIntensity:(CGFloat)intensity {
+    NSLog(@"Setting tile at location %@ to have intensity %2.2f", NSStringFromCGPoint(location), intensity);
+    [[self tileAtLocation:location] setAmbientLight:intensity];
 }
 
 @end

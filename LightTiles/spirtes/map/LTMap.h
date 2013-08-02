@@ -7,10 +7,12 @@
 //
 
 #import "LTMapTile.h"
+#import "LTFlowMap.h"
 
-@interface LTMap : SKNode
+@interface LTMap : SKNode<LTFlowMap>
 
 @property (strong, nonatomic) NSDictionary *tileMap;
+@property (assign, nonatomic) CGSize tileMapSize;
 @property (assign, nonatomic) CGSize size;
 
 - (id)init;

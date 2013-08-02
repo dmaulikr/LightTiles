@@ -8,21 +8,22 @@
 
 #import <SpriteKit/SpriteKit.h>
 
+@class LTMap;
+
 typedef enum {
 
-    north,
-    east,
-    south,
-    west
+    LTBaseTileDirectionNorth, LTBaseTileDirectionEast, LTBaseTileDirectionSouth, LTBaseTileDirectionWest
 
 } LTBaseTileDirection;
 
 @interface LTBaseTile : SKNode
 
+@property (weak, nonatomic) LTMap *map;
 @property (strong, nonatomic) NSArray *adjacentTiles;
+@property (assign, nonatomic) CGPoint location;
 
-- (id)init;
-+ (id)tile;
+- (id)initWithMap:(LTMap *)map;
++ (id)tileWithMap:(LTMap *)map;
 
 - (void)setAdjacentTile:(LTBaseTile *)tile withDirection:(LTBaseTileDirection)direction;
 - (LTBaseTile *)tileForDirection:(LTBaseTileDirection)direction;

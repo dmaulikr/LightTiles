@@ -24,8 +24,8 @@ typedef enum {
 @property (assign, nonatomic) LTMapTileType tileType;
 @property (strong, nonatomic) NSSet *components;
 
-- (id)initWithType:(LTMapTileType)type;
-+ (id)mapTileWithType:(LTMapTileType)type;
+- (id)initWithType:(LTMapTileType)type andMap:(LTMap *)map;
++ (id)mapTileWithType:(LTMapTileType)type andMap:(LTMap *)map;
 
 + (CGSize)size;
 
