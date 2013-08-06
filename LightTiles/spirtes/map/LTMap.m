@@ -57,7 +57,14 @@
         
         while (widthLeft > 0.0) {
 
-            LTMapTile *tile = [LTMapTile mapTileWithType:grassTile andMap:self];
+            LTMapTileType tileType;
+            if (arc4random_uniform(100) > 90) {
+                tileType = shrubTile;
+            } else {
+                tileType = grassTile;
+            }
+
+            LTMapTile *tile = [LTMapTile mapTileWithType:tileType andMap:self];
             tile.position = CGPointMake((col+0.5)*[LTMapTile size].width, (row+0.5)*[LTMapTile size].height);
             tile.location = CGPointMake(col, row);
             [self setTile:tile forLocation:CGPointMake(col, row)];
@@ -98,7 +105,8 @@
 }
 - (void)updateLocation:(CGPoint)location withIntensity:(CGFloat)intensity {
     NSLog(@"Setting tile at location %@ to have intensity %2.2f", NSStringFromCGPoint(location), intensity);
-    [[self tileAtLocation:location] setAmbientLight:intensity];
+    LTMapTile *tile = [self tileAtLocation:location];
+    [tile addAmbientLight:intensity];
 }
 
 @end

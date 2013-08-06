@@ -11,7 +11,8 @@
 typedef enum {
 
     noTile,
-    grassTile
+    grassTile,
+    shrubTile
 
 } LTMapTileType;
 
@@ -28,5 +29,6 @@ typedef enum {
 + (id)mapTileWithType:(LTMapTileType)type andMap:(LTMap *)map;
 
 + (CGSize)size;
+- (void)addAmbientLight:(CGFloat)lightAmount;
 
 @end

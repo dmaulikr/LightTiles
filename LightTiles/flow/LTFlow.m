@@ -24,7 +24,7 @@
         if (self.parent) {
             self.source = self.parent.source;
             self.location = [LTFlow locationFromLocation:self.parent.location andDirection:self.direction];
-            self.intensity = self.parent.intensity * [self.source.flowMap reductionValueAtLocation:self.location];
+            self.intensity = self.parent.intensity/2.0 * [self.source.flowMap reductionValueAtLocation:self.location];
         }
     }
     return self;

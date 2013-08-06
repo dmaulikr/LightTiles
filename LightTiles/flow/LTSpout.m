@@ -31,7 +31,7 @@
 
     // flow!
     self.primaryFlow = [LTRadialFlow flowWithParent:nil andDirection:self.direction];
-    self.primaryFlow.location = self.source.locaiton;
+    self.primaryFlow.location = [LTFlow locationFromLocation:self.source.locaiton andDirection:self.direction];
     self.primaryFlow.intensity = self.source.intensity;
     self.primaryFlow.source = self.source;
     [self.primaryFlow generateSubflows];

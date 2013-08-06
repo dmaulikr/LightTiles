@@ -41,6 +41,7 @@
 
 #pragma mark - Flow
 - (void)flow {
+    [self.flowMap updateLocation:self.locaiton withIntensity:self.intensity];
     for (LTSpout *spout in self.spouts) {
         [spout flow];
     }

@@ -47,6 +47,9 @@ static CGSize LTMapTileSize;
             self.lightAbsorption = 0.9;
             self.background = [SKSpriteNode spriteNodeWithImageNamed:@"grass00.png"];
             break;
+        case shrubTile:
+            self.lightAbsorption = 0.5;
+            self.background  = [SKSpriteNode spriteNodeWithImageNamed:@"shrub00.png"];
 
     }
 
@@ -63,17 +66,28 @@ static CGSize LTMapTileSize;
     _ambientLight = ambientLight;
     self.shade.alpha = fmaxf(1.0 - ambientLight, 0.0);
 }
+- (void)addAmbientLight:(CGFloat)lightAmount {
+    [self setAmbientLight:self.ambientLight + lightAmount];
+}
 
 #pragma mark - Touch Interactions
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+
     /* Called when a touch begins */
     LTSource *lightSource = [LTSource source];
     lightSource.locaiton = self.location;
     lightSource.flowMap = self.map;
-    lightSource.intensity = 1.0;
-    LTSpout *spout = [LTSpout spoutWithSource:lightSource andDirection:LTFlowDirectionNorth];
-    [lightSource addSpout:spout];
+    lightSource.intensity = 2.0;
+    LTSpout *spoutN = [LTSpout spoutWithSource:lightSource andDirection:LTFlowDirectionNorth];
+    LTSpout *spoutE = [LTSpout spoutWithSource:lightSource andDirection:LTFlowDirectionEast];
+    LTSpout *spoutS = [LTSpout spoutWithSource:lightSource andDirection:LTFlowDirectionSouth];
+    LTSpout *spoutW = [LTSpout spoutWithSource:lightSource andDirection:LTFlowDirectionWest];
+    [lightSource addSpout:spoutN];
+    [lightSource addSpout:spoutE];
+    [lightSource addSpout:spoutS];
+    [lightSource addSpout:spoutW];
     [lightSource flow];
 }
+
 
 @end
